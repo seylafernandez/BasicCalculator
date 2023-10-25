@@ -1,5 +1,6 @@
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -125,23 +126,13 @@ public class CalculatorMaker implements ActionListener {
         clear.addActionListener(this);
 
         label = new JLabel(" ");
-        label.setSize(1000,200);
+        label.setPreferredSize(new Dimension(200,60));
+        label.setBorder(BorderFactory.createEmptyBorder(15,15,15,15));
 
-
-
-
-
-
-
-
-        //      label = new JLabel();
-        //     borderPanel = new JPanel();
-        //     numbersPanel = new JPanel();
-        //panel = new JPanel();
 
         borderPanel.setLayout(new BorderLayout());
         borderPanel.add(label, BorderLayout.NORTH);
-        label.setBackground(Color.white);
+        borderPanel.setBackground(Color.white);
         label.setSize(1000,200);
         numbersPanel.setBackground(Color.black);
         borderPanel.add(numbersPanel, BorderLayout.CENTER);
